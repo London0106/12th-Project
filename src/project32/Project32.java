@@ -31,7 +31,7 @@ public class Project32 {
         String cariBarang;
         int temp = 0;
         int harga;
-        int hargaPerBarang;
+        int[] hargaPerBarang ={0};
         do {
 
             System.out.println("===Menu===");
@@ -48,6 +48,7 @@ public class Project32 {
 
                     System.out.println("Insert Jumlah Barang");
                     jumlahBarang = scan.nextInt();
+                    hargaPerBarang = new int[jumlahBarang] ;
                     namaBarang = new String[jumlahBarang];
                     stockBarang = new int[jumlahBarang];
                     for (int j = 0; j <= jumlahBarang - 1; j++) {
@@ -56,11 +57,8 @@ public class Project32 {
                         System.out.println("Input Stock Barang = ");
                         stockBarang[j] = scan.nextInt();
                         System.out.println("Input Harga per Barang = ");
-                        hargaPerBarang = scan.nextInt();
-//                      HARGA
-                        
-                        harga = hargaPerBarang * stockBarang[j];
-                        System.out.println("Harga total = "+harga);
+                        hargaPerBarang[j] = scan.nextInt();
+//                      HAR 
                     }
                     temp = 1;
                     break;
