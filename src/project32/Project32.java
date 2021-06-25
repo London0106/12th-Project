@@ -31,8 +31,9 @@ public class Project32 {
         String cariBarang;
         int temp = 0;
         int harga;
-        int[] hargaPerBarang ={0};
+        int[] hargaPerBarang = {0};
         int hargaTotal;
+        String newNamaBarang;
         do {
 
             System.out.println("===Menu===");
@@ -40,6 +41,7 @@ public class Project32 {
             System.out.println("|| 2.Cari Barang dan Stok");
             System.out.println("|| 3.Membeli Barang");
             System.out.println("|| 4.Adding Stock");
+            System.out.println("|| 5.Edit Nama Barang");
 
             System.out.println("==================");
 
@@ -49,7 +51,7 @@ public class Project32 {
 
                     System.out.println("Insert Jumlah Barang");
                     jumlahBarang = scan.nextInt();
-                    hargaPerBarang = new int[jumlahBarang] ;
+                    hargaPerBarang = new int[jumlahBarang];
                     namaBarang = new String[jumlahBarang];
                     stockBarang = new int[jumlahBarang];
                     for (int j = 0; j <= jumlahBarang - 1; j++) {
@@ -59,16 +61,16 @@ public class Project32 {
                         stockBarang[j] = scan.nextInt();
                         System.out.println("Input Harga per Barang = ");
                         hargaPerBarang[j] = scan.nextInt();
-                      temp = 1;
-                    break;
+                        temp = 1;
+                        break;
 
                     }
-                    
+
                 case 2:
                     if (temp == 0) {
                         System.out.println("Barang Belum Inputkan");
                     } else if (temp == 1) {
-             
+
                         System.out.println("========= Cari Barang ==========");
                         cariBarang = scan.next();
                         for (int k = 0; k <= jumlahBarang - 1; k++) {
@@ -76,7 +78,7 @@ public class Project32 {
 
                                 System.out.println("Barang is found");
                                 System.out.println("Stock Barang = " + stockBarang[k]);
-                                System.out.println("Harga Per Barang = "+hargaPerBarang[k]);
+                                System.out.println("Harga Per Barang = " + hargaPerBarang[k]);
                                 System.out.println("=======");
                             }
                         }
@@ -104,10 +106,11 @@ public class Project32 {
                                     hargaTotal = hargaPerBarang[z] * jumlahBeli;
                                 System.out.println("Harga Total = "+hargaTotal);
                                     stockBarang[z] = stockBarang[z] - jumlahBeli;
+                                    hargaTotal = hargaPerBarang[z] * jumlahBeli;
+                                    System.out.println("Harga Total = " + hargaTotal);
+
                                 }
-                                
-                                
-                                
+
                             }
                         }
                     }
@@ -135,13 +138,27 @@ public class Project32 {
 
                             } else {
                                 System.out.println("Barang is Not FOUND ");
-                      
+
                             }
-                           
+
                         }
 
                     }
-                
+                case 5:
+                    System.out.println("=======Edit Nama Barang ==========");
+                    System.out.println("Cari Nama Barang ");
+                    cariBarang = scan.next();
+                    for(int v = 0; v <= jumlahBarang - 1; v++){
+                        if(cariBarang.equalsIgnoreCase(namaBarang[v])){
+                            System.out.println("nama barang yang baru = ");
+                            newNamaBarang = scan.next();
+                            newNamaBarang = namaBarang[v];
+                            
+                        }
+                    }
+                  
+                    System.out.println("=");
+                    break;
                 default:
                     break;
             }
