@@ -34,6 +34,7 @@ public class Project32 {
             System.out.println("1.Insert Barang");
             System.out.println("2.Cari Barang dan Stok");
             System.out.println("3.Membeli Barang");
+            System.out.println("4.Adding Stock");
 
             System.out.println("=");
 
@@ -80,27 +81,30 @@ public class Project32 {
                         System.out.println("Barang yang dibeli");
                         System.out.println("=");
                         barangBeli = scan.next();
-                        int g;
-                        g = scan.nextInt();
-                        if (stockBarang[g] <= jumlahBarang){
-                        System.out.println("No More Stock");
-                        
-                    }
-                        else if(stockBarang[g] >= jumlahBarang){
-                            System.out.println("No More Stock");
-                        }
+
                         for (int z = 0; z <= jumlahBarang - 1; z++) {
                             if (barangBeli.equalsIgnoreCase(namaBarang[z])) {
                                 System.out.println("Barang is Found ");
-                                System.out.println("Berapa Barang Yang Ingin Dibeli ?");
+                                System.out.println("Jumlah Barang Yang Ingin Dibeli ?");
+                                System.out.println("===========================");
                                 int jumlahBeli = scan.nextInt();
-                                stockBarang[z] = stockBarang[z] - jumlahBeli;
+                                if (stockBarang[z] < jumlahBeli) {
+                                    System.out.println("Out Of Stock  !!!! ");
+                                } else {
+                                    stockBarang[z] = stockBarang[z] - jumlahBeli;
+                                }
+
                             }
                         }
                     }
 
                     //                  stock barang akan dikurangi dengan jumlah barang yang ingin dibeli.Make stock.
                     break;
+                    
+                case 4: 
+                    System.out.println("===========  ADDING STOCK MENU ==========");
+                    System.out.println("1.Nama Barang Yang Ingin Ditambahkan ");
+                    System.out.println("2. Jumlah stok barang yang Ingin DitambahKan  ");
                 default:
                     break;
             }
