@@ -54,25 +54,41 @@ public class Project32 {
                     temp = 1;
                     break;
                 case 2:
-                    System.out.println("Cari Barang");
-                    cariBarang = scan.next();
-                    for (int k = 0; k <= jumlahBarang - 1; k++) {
-                        if (cariBarang.equalsIgnoreCase(namaBarang[k])) {
+                    if (temp == 0) {
+                        System.out.println("Barang Belum Inputkan");
+                    } else if (temp == 1) {
+                        System.out.println("Barang yang dibeli");
+                        System.out.println("=");
+                        barangBeli = scan.next();
+                        System.out.println("Cari Barang");
+                        cariBarang = scan.next();
+                        for (int k = 0; k <= jumlahBarang - 1; k++) {
+                            if (cariBarang.equalsIgnoreCase(namaBarang[k])) {
 
-                            System.out.println("Barang is found");
-                            System.out.println("Stock Barang = " + stockBarang[k]);
+                                System.out.println("Barang is found");
+                                System.out.println("Stock Barang = " + stockBarang[k]);
+                            }
                         }
+
                     }
 
                     break;
                 case 3:
                     if (temp == 0) {
                         System.out.println("Barang Belum Inputkan ");
-                    } 
-                    else if (temp == 1) {
+                    } else if (temp == 1) {
                         System.out.println("Barang yang dibeli");
                         System.out.println("=");
                         barangBeli = scan.next();
+                        int g;
+                        g = scan.nextInt();
+                        if (stockBarang[g] <= jumlahBarang){
+                        System.out.println("No More Stock");
+                        
+                    }
+                        else if(stockBarang[g] >= jumlahBarang){
+                            System.out.println("No More Stock");
+                        }
                         for (int z = 0; z <= jumlahBarang - 1; z++) {
                             if (barangBeli.equalsIgnoreCase(namaBarang[z])) {
                                 System.out.println("Barang is Found ");
