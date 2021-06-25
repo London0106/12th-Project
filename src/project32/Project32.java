@@ -35,12 +35,12 @@ public class Project32 {
         do {
 
             System.out.println("===Menu===");
-            System.out.println("1.Insert Barang");
-            System.out.println("2.Cari Barang dan Stok");
-            System.out.println("3.Membeli Barang");
-            System.out.println("4.Adding Stock");
+            System.out.println("|| 1.Insert Barang");
+            System.out.println("|| 2.Cari Barang dan Stok");
+            System.out.println("|| 3.Membeli Barang");
+            System.out.println("|| 4.Adding Stock");
 
-            System.out.println("=");
+            System.out.println("==================");
 
             i = scan.nextInt();
             switch (i) {
@@ -67,13 +67,15 @@ public class Project32 {
                         System.out.println("Barang Belum Inputkan");
                     } else if (temp == 1) {
 
-                        System.out.println("Cari Barang");
+                        System.out.println("========= Cari Barang ==========");
                         cariBarang = scan.next();
                         for (int k = 0; k <= jumlahBarang - 1; k++) {
                             if (cariBarang.equalsIgnoreCase(namaBarang[k])) {
 
                                 System.out.println("Barang is found");
                                 System.out.println("Stock Barang = " + stockBarang[k]);
+                                System.out.println("Harga Per Barang ");
+                                System.out.println("=======");
                             }
                         }
 
