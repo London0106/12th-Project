@@ -17,27 +17,32 @@ public class Project32 {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-              Scanner scan = new Scanner(System.in);
+        Scanner scan = new Scanner(System.in);
 
-        String[] namaBarang ={""} ;
-        int [] stockBarang = {0};
+        String[] namaBarang = {""};
+        int[] stockBarang = {0};
         int jumlahBarang = 0;
         int i = 0;
         String barangBeli;
         int jumlahBarangBeli;
         String cariBarang;
-        
+
 //        String namaBarang  [] = new String [jumlahBarang];
         //menu
         do {
+//          
+            System.out.println("cls");
             System.out.println("===Menu===");
-            System.out.println("1.Nama Barang");
-            System.out.println("2.Cari Barang");
-            System.out.println("3.Menampil Barang & Stock");
+            System.out.println("1.Insert Barang");
+            System.out.println("2.Cari Barang dan Stok");
+            System.out.println("3.Membeli Barang");
+            
             System.out.println("=");
+            
             i = scan.nextInt();
             switch (i) {
                 case 1:
+         
                     System.out.println("Insert Jumlah Barang");
                     jumlahBarang = scan.nextInt();
                     namaBarang = new String[jumlahBarang];
@@ -46,46 +51,34 @@ public class Project32 {
                         System.out.println("Input Nama Barang = ");
                         namaBarang[j] = scan.next();
                         System.out.println("Input Stock Barang = ");
-                        stockBarang [j] = scan.nextInt();
+                        stockBarang[j] = scan.nextInt();
                     }
                     break;
                 case 2:
                     System.out.println("Cari Barang");
                     cariBarang = scan.next();
-                    for (int k = 0; k <= jumlahBarang-1; k++) {
-                        if (cariBarang.equalsIgnoreCase(namaBarang[k]) ) {
-
+                    for (int k = 0; k <= jumlahBarang - 1; k++) {
+                        if (cariBarang.equalsIgnoreCase(namaBarang[k])) {
 
                             System.out.println("Barang is found");
-                            System.out.println("Stock Barang = "+stockBarang[k]);
+                            System.out.println("Stock Barang = " + stockBarang[k]);
                         }
                     }
 
                     break;
-                case 3 :
+                case 3:
                     System.out.println("Barang yang dibeli");
                     System.out.println("=");
                     barangBeli = scan.next();
-                    if (barangBeli !== cariBarang){
-                        System.out.println("Barang does not exist.");
-                     
+                    for (int z = 0; z <= jumlahBarang - 1; z++) {
+                        if (barangBeli.equalsIgnoreCase(namaBarang[z])) {
+                            System.out.println("Barang is Found ");
+                            System.out.println("Berapa Barang Yang Ingin Dibeli ?");
+                            int jumlahBeli = scan.nextInt();
+                            stockBarang[z] = stockBarang[z] - jumlahBeli;
+                        }
                     }
-                    else if (barangBeli == cariBarang){
-                    System.out.println("Barang exist");
-                    System.out.println("Barang = "+barangBeli);
-                }
-                    System.out.println("Jumlah barang yang ingin dibeli");
-                    System.out.println("=");
-                    jumlahBarangBeli = scan.nextInt();
-                    if (barangBeli !== cariBarang){
-                        System.out.println("Please try again...");
-                    }
-                    else if (barangBeli == cariBarang){
-                            System.out.println("Jumlah barang = "+jumlahBarangBeli);
-                            }
-                    jumlahBarangBeli = jumlahBarangBeli - barangBeli;
-                    System.out.println("Script Succesful . . .");
-//                  stock barang akan dikurangi dengan jumlah barang yang ingin dibeli.Make stock.
+                    //                  stock barang akan dikurangi dengan jumlah barang yang ingin dibeli.Make stock.
                     break;
                 default:
                     break;
@@ -95,7 +88,4 @@ public class Project32 {
 
     }
 
-        
-    }
-    
-
+}
