@@ -32,6 +32,7 @@ public class Project32 {
         int temp = 0;
         int harga;
         int[] hargaPerBarang ={0};
+        int hargaTotal;
         do {
 
             System.out.println("===Menu===");
@@ -75,7 +76,7 @@ public class Project32 {
 
                                 System.out.println("Barang is found");
                                 System.out.println("Stock Barang = " + stockBarang[k]);
-                                System.out.println("Harga Per Barang "+hargaPerBarang[k]);
+                                System.out.println("Harga Per Barang = "+hargaPerBarang[k]);
                                 System.out.println("=======");
                             }
                         }
@@ -102,7 +103,10 @@ public class Project32 {
                                 } else {
                                     stockBarang[z] = stockBarang[z] - jumlahBeli;
                                 }
-
+                                hargaTotal = hargaPerBarang[z] * jumlahBeli;
+                                System.out.println("Harga Total = "+hargaTotal);
+                                
+                                
                             }
                         }
                     }
@@ -130,7 +134,9 @@ public class Project32 {
 
                             } else {
                                 System.out.println("Barang is Not FOUND ");
+                      
                             }
+                           
                         }
 
                     }
