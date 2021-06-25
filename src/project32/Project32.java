@@ -58,15 +58,16 @@ public class Project32 {
                         stockBarang[j] = scan.nextInt();
                         System.out.println("Input Harga per Barang = ");
                         hargaPerBarang[j] = scan.nextInt();
-//                      HAR 
-                    }
-                    temp = 1;
+                      temp = 1;
                     break;
+
+                    }
+                    
                 case 2:
                     if (temp == 0) {
                         System.out.println("Barang Belum Inputkan");
                     } else if (temp == 1) {
-
+             
                         System.out.println("========= Cari Barang ==========");
                         cariBarang = scan.next();
                         for (int k = 0; k <= jumlahBarang - 1; k++) {
@@ -74,7 +75,7 @@ public class Project32 {
 
                                 System.out.println("Barang is found");
                                 System.out.println("Stock Barang = " + stockBarang[k]);
-                                System.out.println("Harga Per Barang ");
+                                System.out.println("Harga Per Barang "+hargaPerBarang[k]);
                                 System.out.println("=======");
                             }
                         }
