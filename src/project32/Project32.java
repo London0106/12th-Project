@@ -101,10 +101,11 @@ public class Project32 {
                                 if (stockBarang[z] < jumlahBeli) {
                                     System.out.println("Out Of Stock  !!!! ");
                                 } else {
+                                    hargaTotal = hargaPerBarang[z] * jumlahBeli;
+                                System.out.println("Harga Total = "+hargaTotal);
                                     stockBarang[z] = stockBarang[z] - jumlahBeli;
                                 }
-                                hargaTotal = hargaPerBarang[z] * jumlahBeli;
-                                System.out.println("Harga Total = "+hargaTotal);
+                                
                                 
                                 
                             }
