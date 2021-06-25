@@ -30,6 +30,8 @@ public class Project32 {
         int addBarang;
         String cariBarang;
         int temp = 0;
+        int harga;
+        int hargaPerBarang;
         do {
 
             System.out.println("===Menu===");
@@ -53,6 +55,12 @@ public class Project32 {
                         namaBarang[j] = scan.next();
                         System.out.println("Input Stock Barang = ");
                         stockBarang[j] = scan.nextInt();
+                        System.out.println("Input Harga per Barang = ");
+                        hargaPerBarang = scan.nextInt();
+//                      HARGA
+                        
+                        harga = hargaPerBarang * stockBarang[j];
+                        System.out.println("Harga total = "+harga);
                     }
                     temp = 1;
                     break;
@@ -120,12 +128,12 @@ public class Project32 {
                                 System.out.println("Success Adding Stock !!!");
 
                             } else {
-                                System.out.println("Barang is NOt FOUND ");
+                                System.out.println("Barang is Not FOUND ");
                             }
                         }
 
                     }
-
+                
                 default:
                     break;
             }
