@@ -25,6 +25,7 @@ public class Project32 {
         int i = 0;
         String barangBeli;
         int jumlahBarangBeli;
+        int continues;
         String cariBarang;
 
 //        String namaBarang  [] = new String [jumlahBarang];
@@ -67,6 +68,18 @@ public class Project32 {
 
                     break;
                 case 3:
+                    if (stockBarang = 0){
+                            System.out.println("Add Stock Barang ; No Stock.");
+                            System.out.println("quitting . . .");
+                    }
+                    else if (stockBarang[z] < jumlahBarang){
+                        System.out.println("Stock Succesful ; Barang Succesful");
+                        System.out.println("You may continue . . .");
+                        continues = scan.nextInt();
+                    }
+                    
+                    
+                    
                     System.out.println("Barang yang dibeli");
                     System.out.println("=");
                     barangBeli = scan.next();
