@@ -62,9 +62,10 @@ public class Project32 {
                         System.out.println("Input Harga per Barang = ");
                         hargaPerBarang[j] = scan.nextInt();
                         temp = 1;
-                        break;
+                      
 
                     }
+                    break;
 
                 case 2:
                     if (temp == 0) {
@@ -152,7 +153,8 @@ public class Project32 {
                         if(cariBarang.equalsIgnoreCase(namaBarang[v])){
                             System.out.println("nama barang yang baru = ");
                             newNamaBarang = scan.next();
-                            newNamaBarang = namaBarang[v];
+                            System.out.println("Index ke "+newNamaBarang);
+                            namaBarang[v]= newNamaBarang ;
                             
                         }
                     }
