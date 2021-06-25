@@ -27,23 +27,20 @@ public class Project32 {
         int jumlahBarangBeli;
         int continues;
         String cariBarang;
-
-//        String namaBarang  [] = new String [jumlahBarang];
-        //menu
+        int temp = 0;
         do {
-//          
-            System.out.println("cls");
+
             System.out.println("===Menu===");
             System.out.println("1.Insert Barang");
             System.out.println("2.Cari Barang dan Stok");
             System.out.println("3.Membeli Barang");
-            
+
             System.out.println("=");
-            
+
             i = scan.nextInt();
             switch (i) {
                 case 1:
-         
+
                     System.out.println("Insert Jumlah Barang");
                     jumlahBarang = scan.nextInt();
                     namaBarang = new String[jumlahBarang];
@@ -54,6 +51,7 @@ public class Project32 {
                         System.out.println("Input Stock Barang = ");
                         stockBarang[j] = scan.nextInt();
                     }
+                    temp = 1;
                     break;
                 case 2:
                     System.out.println("Cari Barang");
@@ -68,29 +66,23 @@ public class Project32 {
 
                     break;
                 case 3:
-                    if (stockBarang = 0){
-                            System.out.println("Add Stock Barang ; No Stock.");
-                            System.out.println("quitting . . .");
-                    }
-                    else if (stockBarang[z] < jumlahBarang){
-                        System.out.println("Stock Succesful ; Barang Succesful");
-                        System.out.println("You may continue . . .");
-                        continues = scan.nextInt();
-                    }
-                    
-                    
-                    
-                    System.out.println("Barang yang dibeli");
-                    System.out.println("=");
-                    barangBeli = scan.next();
-                    for (int z = 0; z <= jumlahBarang - 1; z++) {
-                        if (barangBeli.equalsIgnoreCase(namaBarang[z])) {
-                            System.out.println("Barang is Found ");
-                            System.out.println("Berapa Barang Yang Ingin Dibeli ?");
-                            int jumlahBeli = scan.nextInt();
-                            stockBarang[z] = stockBarang[z] - jumlahBeli;
+                    if (temp == 0) {
+                        System.out.println("Barang Belum Inputkan ");
+                    } 
+                    else if (temp == 1) {
+                        System.out.println("Barang yang dibeli");
+                        System.out.println("=");
+                        barangBeli = scan.next();
+                        for (int z = 0; z <= jumlahBarang - 1; z++) {
+                            if (barangBeli.equalsIgnoreCase(namaBarang[z])) {
+                                System.out.println("Barang is Found ");
+                                System.out.println("Berapa Barang Yang Ingin Dibeli ?");
+                                int jumlahBeli = scan.nextInt();
+                                stockBarang[z] = stockBarang[z] - jumlahBeli;
+                            }
                         }
                     }
+
                     //                  stock barang akan dikurangi dengan jumlah barang yang ingin dibeli.Make stock.
                     break;
                 default:
