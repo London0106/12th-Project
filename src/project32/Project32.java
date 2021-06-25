@@ -26,6 +26,8 @@ public class Project32 {
         String barangBeli;
         int jumlahBarangBeli;
         int continues;
+        String addNamaBarang;
+        int addBarang;
         String cariBarang;
         int temp = 0;
         do {
@@ -102,9 +104,22 @@ public class Project32 {
                     break;
                     
                 case 4: 
+                    if (temp == 0){
+                        System.out.println("Barang Belum Inputkan");
+                    }
+                    else if (temp == 1){
+                        System.out.println("Welcome to Adding Stock Menu.");
+                    }
                     System.out.println("===========  ADDING STOCK MENU ==========");
                     System.out.println("1.Nama Barang Yang Ingin Ditambahkan ");
+                    System.out.println("=");
+                    addNamaBarang = scan.next();
                     System.out.println("2. Jumlah stok barang yang Ingin DitambahKan  ");
+                    System.out.println("=");
+                    addBarang = scan.nextInt();
+                    addBarang = addBarang + jumlahBarang;
+                    addNamaBarang = addNamaBarang + namaBarang;
+                    System.out.println("Adding Stock Succesful");
                 default:
                     break;
             }
