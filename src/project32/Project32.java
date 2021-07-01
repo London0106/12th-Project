@@ -20,19 +20,23 @@ public class Project32 {
         Scanner scan = new Scanner(System.in);
 
         String[] namaBarang = {""};
+        String[] namaBarang1 = {""};
         int[] stockBarang = {0};
+        int newHargaBarang;
         int jumlahBarang = 0;
         int i = 0;
         String barangBeli;
         int jumlahBarangBeli;
         int continues;
         String addNamaBarang;
+        int tampilHargaBarang;
         int addBarang;
         String cariBarang;
         int temp = 0;
         int harga;
         int[] hargaPerBarang = {0};
         int hargaTotal;
+        int editHargaBarang;
         String newNamaBarang;
         do {
 
@@ -163,10 +167,23 @@ public class Project32 {
                     System.out.println("=");
                     break;
                 case 6 : 
+                       
                        System.out.println("========== Edit Harga Barang =======");
-                       System.out.println("Masukan Nama Barang ");
-                       System.out.println("Tampilan Harga Barang ");
-                       System.out.println("Masukan Harga Barang Baru ");
+                       System.out.println("Masukan Nama Barang = ");
+                       namaBarang = scan.next();
+                       for(int b = 0; b <= jumlahBarang - 1; b++){
+                           if(editHargaBarang.equalsIgnoreCase(newNamaBarang[b])){
+                               System.out.println("hargaBarang yang baru = ");
+                               newHargaBarang = scan.nextInt();
+                               System.out.println("Index ke"+newNamaBarang);
+                               namaBarang[b]=newNamaBarang;
+                           }
+                       }
+                       System.out.println("Tampilan Harga Barang = ");
+                       tampilHargaBarang = scan.nextInt();
+                       System.out.println("Masukan Harga Barang Baru = ");
+                       editHargaBarang = scan.nextInt();
+                       
                        break ; 
                 default:
                     break;
