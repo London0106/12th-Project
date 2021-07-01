@@ -16,17 +16,18 @@ public class Project32 {
     /**
      * @param args the command line arguments
      */
-    public int diskon(int hargaTotal){
+    public int diskon(int hargaTotal) {
 //        Jumlah barang yang dibeli lebih besar 5 dia dapat diskon 5  % ; 
-        return hargaTotal ; 
+        return hargaTotal;
     }
+
     public static void main(String[] args) {
         Scanner scan = new Scanner(System.in);
 
         String[] namaBarang = {""};
         String[] namaBarang1 = {""};
         int[] stockBarang = {0};
-        int[] newHargaBarang={0};
+        int[] newHargaBarang = {0};
         int jumlahBarang = 0;
         int i = 0;
         String barangBeli;
@@ -51,7 +52,7 @@ public class Project32 {
             System.out.println("|| 4.Adding Stock");
             System.out.println("|| 5.Edit Nama Barang");
             System.out.println("|| 6.Edit Harga Barang");
- 
+
             System.out.println("==================");
 
             i = scan.nextInt();
@@ -71,8 +72,7 @@ public class Project32 {
                         System.out.println("Input Harga per Barang = ");
                         hargaPerBarang[j] = scan.nextInt();
                         temp = 1;
-                      
-                   
+
                     }
                     break;
 
@@ -114,7 +114,7 @@ public class Project32 {
                                     System.out.println("Out Of Stock  !!!! ");
                                 } else {
                                     hargaTotal = hargaPerBarang[z] * jumlahBeli;
-                                System.out.println("Harga Total = "+hargaTotal);
+                                    System.out.println("Harga Total = " + hargaTotal);
                                     stockBarang[z] = stockBarang[z] - jumlahBeli;
                                     hargaTotal = hargaPerBarang[z] * jumlahBeli;
                                     System.out.println("Harga Total = " + hargaTotal);
@@ -158,37 +158,37 @@ public class Project32 {
                     System.out.println("=======Edit Nama Barang ==========");
                     System.out.println("Cari Nama Barang ");
                     cariBarang = scan.next();
-                    for(int v = 0; v <= jumlahBarang - 1; v++){
-                        if(cariBarang.equalsIgnoreCase(namaBarang[v])){
+                    for (int v = 0; v <= jumlahBarang - 1; v++) {
+                        if (cariBarang.equalsIgnoreCase(namaBarang[v])) {
                             System.out.println("nama barang yang baru = ");
                             newNamaBarang = scan.next();
-                            System.out.println("Index ke "+newNamaBarang);
-                            namaBarang[v]= newNamaBarang ;
-                            
+                            System.out.println("Index ke " + newNamaBarang);
+                            namaBarang[v] = newNamaBarang;
+
                         }
                     }
-                  
+
                     System.out.println("=");
                     break;
-                case 6 : 
-                       
-                       System.out.println("========== Edit Harga Barang =======");
-                       System.out.println("Masukan Nama Barang = ");
-                       newNamaBarang = scan.next();
-                       for(int b = 0; b <= jumlahBarang - 1; b++){
-                           if(newNamaBarang.equalsIgnoreCase(namaBarang[b])){
-                               System.out.println("hargaBarang yang baru = ");
-                               newHargaBarang[b] = scan.nextInt();
-                               System.out.println("Index ke"+newNamaBarang);
-                               hargaPerBarang[b]=newNamaBarang[b];
-                           }
-                       }
-                       System.out.println("Tampilan Harga Barang = ");
-                       tampilHargaBarang = scan.nextInt();
-                       System.out.println("Masukan Harga Barang Baru = ");
-                       editHargaBarang = scan.nextInt();
-                       
-                    break; 
+                case 6:
+
+                    System.out.println("========== Edit Harga Barang =======");
+                    System.out.println("Masukan Nama Barang = ");
+                    newNamaBarang = scan.next();
+                    for (int b = 0; b <= jumlahBarang - 1; b++) {
+                        if (newNamaBarang.equalsIgnoreCase(namaBarang[b])) {
+                            System.out.println("Harga Barang" +hargaPerBarang[b]);
+                            System.out.println("hargaBarang yang baru = ");
+                            newHargaBarang[b] = scan.nextInt();
+                            hargaPerBarang[b] = newHargaBarang[b];
+                        }
+                    }
+                    System.out.println("Tampilan Harga Barang = ");
+                    tampilHargaBarang = scan.nextInt();
+                    System.out.println("Masukan Harga Barang Baru = ");
+                    editHargaBarang = scan.nextInt();
+
+                    break;
                 default:
                     break;
             }
