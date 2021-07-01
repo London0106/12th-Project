@@ -170,9 +170,9 @@ public class Project32 {
                        
                        System.out.println("========== Edit Harga Barang =======");
                        System.out.println("Masukan Nama Barang = ");
-                       namaBarang = scan.next();
+                       newNamaBarang = scan.next();
                        for(int b = 0; b <= jumlahBarang - 1; b++){
-                           if(editHargaBarang.equalsIgnoreCase(newNamaBarang[b])){
+                           if(newNamaBarang.equalsIgnoreCase(namaBarang[b])){
                                System.out.println("hargaBarang yang baru = ");
                                newHargaBarang = scan.nextInt();
                                System.out.println("Index ke"+newNamaBarang);
@@ -184,7 +184,7 @@ public class Project32 {
                        System.out.println("Masukan Harga Barang Baru = ");
                        editHargaBarang = scan.nextInt();
                        
-                       break ; 
+                    break; 
                 default:
                     break;
             }
