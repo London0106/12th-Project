@@ -42,6 +42,7 @@ public class Project32 {
             System.out.println("|| 3.Membeli Barang");
             System.out.println("|| 4.Adding Stock");
             System.out.println("|| 5.Edit Nama Barang");
+            System.out.println("|| 6.Edit Harga Barang");
 
             System.out.println("==================");
 
@@ -161,6 +162,12 @@ public class Project32 {
                   
                     System.out.println("=");
                     break;
+                case 6 : 
+                       System.out.println("========== Edit Harga Barang =======");
+                       System.out.println("Masukan Nama Barang ");
+                       System.out.println("Tampilan Harga Barang ");
+                       System.out.println("Masukan Harga Barang Baru ");
+                       break ; 
                 default:
                     break;
             }
