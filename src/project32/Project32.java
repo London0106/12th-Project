@@ -16,13 +16,17 @@ public class Project32 {
     /**
      * @param args the command line arguments
      */
+    public int diskon(int hargaTotal){
+//        Jumlah barang yang dibeli lebih besar 5 dia dapat diskon 5  % ; 
+        return hargaTotal ; 
+    }
     public static void main(String[] args) {
         Scanner scan = new Scanner(System.in);
 
         String[] namaBarang = {""};
         String[] namaBarang1 = {""};
         int[] stockBarang = {0};
-        int newHargaBarang;
+        int[] newHargaBarang={0};
         int jumlahBarang = 0;
         int i = 0;
         String barangBeli;
@@ -47,7 +51,7 @@ public class Project32 {
             System.out.println("|| 4.Adding Stock");
             System.out.println("|| 5.Edit Nama Barang");
             System.out.println("|| 6.Edit Harga Barang");
-
+ 
             System.out.println("==================");
 
             i = scan.nextInt();
@@ -174,9 +178,9 @@ public class Project32 {
                        for(int b = 0; b <= jumlahBarang - 1; b++){
                            if(newNamaBarang.equalsIgnoreCase(namaBarang[b])){
                                System.out.println("hargaBarang yang baru = ");
-                               newHargaBarang = scan.nextInt();
+                               newHargaBarang[b] = scan.nextInt();
                                System.out.println("Index ke"+newNamaBarang);
-                               namaBarang[b]=newNamaBarang;
+                               hargaPerBarang[b]=newNamaBarang[b];
                            }
                        }
                        System.out.println("Tampilan Harga Barang = ");
