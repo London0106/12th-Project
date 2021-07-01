@@ -63,7 +63,7 @@ public class Project32 {
                         hargaPerBarang[j] = scan.nextInt();
                         temp = 1;
                       
-
+                   
                     }
                     break;
 
